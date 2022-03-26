@@ -2,6 +2,7 @@ import time
 import jwt
 import requests
 
+
 service_account_id = "ajeklj8oib9gq34dh9sn"
 key_id = "ajeoa28hhkmjc4hp0268" # ID ресурса Key, который принадлежит сервисному аккаунту.
 
@@ -30,6 +31,7 @@ headers = {
 
 data = '{"jwt": "<SIGNED-JWT>"}'
 
-response = requests.post('https://iam.api.cloud.yandex.net/iam/v1/tokens', headers=headers, data=data)
+
+response = requests.post('https://iam.api.cloud.yandex.net/iam/v1/tokens', headers=headers, json=data)
 
 print(response)
